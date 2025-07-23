@@ -1,80 +1,125 @@
-<div align="center">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Straw Hat Crew Viewer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0b0c10;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #FFD700;
+    }
+    .crew-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+    .crew-btn {
+      background: #1f2833;
+      border: 2px solid #66fcf1;
+      color: #66fcf1;
+      padding: 10px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .crew-btn:hover {
+      background: #45a29e;
+      color: #0b0c10;
+    }
+    .profile {
+      margin-top: 30px;
+      display: none;
+      animation: fadeIn 0.5s;
+    }
+    .profile img {
+      width: 200px;
+      border-radius: 12px;
+      border: 3px solid #66fcf1;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
 
-# ☠️ Monkey D. Luffy  
-## Captain of the Straw Hat Pirates ⛵  
-### Future King of the Pirates! 👒
+  <h1>☠️ Straw Hat Pirates Profile Viewer</h1>
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=FFD700&center=true&vCenter=true&width=435&lines=I+ate+the+Gomu+Gomu+no+Mi;I+never+go+back+on+my+word;Gear+5+unlocked...+Let’s+go!;We’re+heading+to+Raftel!)
+  <div class="crew-list">
+    <button class="crew-btn" onclick="showProfile('luffy')">Luffy</button>
+    <button class="crew-btn" onclick="showProfile('zoro')">Zoro</button>
+    <button class="crew-btn" onclick="showProfile('nami')">Nami</button>
+    <button class="crew-btn" onclick="showProfile('sanji')">Sanji</button>
+    <button class="crew-btn" onclick="showProfile('robin')">Robin</button>
+  </div>
 
----
+  <div id="profile" class="profile">
+    <h2 id="name"></h2>
+    <p id="role"></p>
+    <p id="bounty"></p>
+    <p id="powers"></p>
+    <img id="photo" src="" alt="Crew Photo">
+  </div>
 
-### 🏴‍☠️ Meet My Crew
+  <script>
+    const crewData = {
+      luffy: {
+        name: "Monkey D. Luffy",
+        role: "Captain",
+        bounty: "₯ 3,000,000,000",
+        powers: "Gomu Gomu no Mi (Hito Hito no Mi: Model Nika), Gear 5, Conqueror's Haki",
+        photo: "https://static.wikia.nocookie.net/onepiece/images/9/99/Luffy_Gear_5_Anime.png"
+      },
+      zoro: {
+        name: "Roronoa Zoro",
+        role: "Swordsman",
+        bounty: "₯ 1,111,000,000",
+        powers: "Santoryu (Three Sword Style), Advanced Armament Haki",
+        photo: "https://static.wikia.nocookie.net/onepiece/images/d/d6/Zoro_Wano_Anime.png"
+      },
+      nami: {
+        name: "Nami",
+        role: "Navigator",
+        bounty: "₯ 366,000,000",
+        powers: "Climatact, Weather Manipulation, Zeus",
+        photo: "https://static.wikia.nocookie.net/onepiece/images/f/fd/Nami_Wano_Anime.png"
+      },
+      sanji: {
+        name: "Vinsmoke Sanji",
+        role: "Cook",
+        bounty: "₯ 1,032,000,000",
+        powers: "Black Leg Style, Diable Jambe, Exoskeleton, Sky Walk",
+        photo: "https://static.wikia.nocookie.net/onepiece/images/5/59/Sanji_Wano_Anime.png"
+      },
+      robin: {
+        name: "Nico Robin",
+        role: "Archaeologist",
+        bounty: "₯ 930,000,000",
+        powers: "Hana Hana no Mi, Gigantesco Mano, Demonio Fleur",
+        photo: "https://static.wikia.nocookie.net/onepiece/images/c/c0/Robin_Post_Wano_Anime.png"
+      }
+    };
 
-- 🧭 **Nami** – Navigator and Cat Burglar  
-- 🗡️ **Roronoa Zoro** – Swordsman with no sense of direction  
-- 🎯 **Usopp** – Sniper King of Snipers  
-- 🍖 **Sanji** – Cook & Simp of the Sea  
-- 🧠 **Nico Robin** – Archaeologist and dark humor expert  
-- 🦴 **Brook** – Musician (yes, he's dead)  
-- 🛠️ **Franky** – Cyborg Shipwright and cola-powered  
-- 🐌 **Tony Tony Chopper** – Doctor and adorable mascot  
-- 🐟 **Jinbe** – Helmsman and Fishman Karate master
+    function showProfile(key) {
+      const member = crewData[key];
+      document.getElementById("name").textContent = member.name;
+      document.getElementById("role").textContent = `Role: ${member.role}`;
+      document.getElementById("bounty").textContent = `Bounty: ${member.bounty}`;
+      document.getElementById("powers").textContent = `Powers: ${member.powers}`;
+      document.getElementById("photo").src = member.photo;
+      document.getElementById("profile").style.display = 'block';
+    }
+  </script>
 
----
-
-### ⚔️ My Bounty & Power-Ups
-
-<div align="center">
-
-![Bounty](https://img.shields.io/badge/Wanted-3,000,000,000₯-gold?style=for-the-badge)
-![Devil Fruit](https://img.shields.io/badge/Devil+Fruit-Hito_Hito_no_Mi_:-_Model_Nika-orange?style=for-the-badge)
-![Haki](https://img.shields.io/badge/Haki-Conqueror's-purple?style=for-the-badge)
-![Ship](https://img.shields.io/badge/Ship-Thousand_Sunny-1E90FF?style=for-the-badge)
-![Gear 5](https://img.shields.io/badge/Gear-5-white?style=for-the-badge)
-
-</div>
-
----
-
-### 🗺️ Grand Line Adventures
-
-- 🐚 **Skypiea** – Fought “God” and rang the bell  
-- 🧊 **Enies Lobby** – Declared war on the World Government  
-- 🔥 **Marineford** – Lost Ace, but never the will  
-- 🐘 **Zou & Wano** – Awakened Joy Boy, changed the game  
-- 🏝️ **Whole Cake Island** – Punched Big Mom’s chef in the face  
-- 🏴‍☠️ **Onward to Raftel...**
-
----
-
-### 🎶 Crew Anthem Playlist
-
-- **We Are!** – The dream begins  
-- **Binks no Sake** – A pirate farewell  
-- **Hope** – Facing impossible odds  
-- **Overtaken** – Victory theme of legends  
-- **Fight Together** – Bonds beyond death
-
----
-
-### 💬 Words to Live By
-
-> *"I have a crew who believe in me." – Luffy*  
-> *"Inherited will never fades away." – Gol D. Roger*  
-> *"When do you think people die? When they are shot with a bullet? No! It's when they are forgotten!" – Dr. Hiluluk*
-
----
-
-<div align="center">
-  <img src="https://media.giphy.com/media/9Y5BbDSkSTiY8/giphy.gif" width="280" alt="Luffy Laughing" />
-</div>
-
----
-
-<div align="center">
-
-🌊 Thanks for sailing through my logbook!  
-💥 Drop a ⭐ if you'd join the Straw Hat crew!  
-⚓ Never forget — the One Piece is real!
-
-</div>
+</body>
+</html>
