@@ -89,6 +89,10 @@ Click on any crew member below to explore their legend. 🗺️
 
 ---
 
+✨ *Thanks for visiting the Grand Line!*  
+💫 *Leave a ⭐ if you'd join the Straw Hat Crew!*  
+⚓ *The One Piece is real... and it's waiting.*
+
 <div align="center">
 
 <img src="https://media.giphy.com/media/l0HlNQ03J5JxX6lva/giphy.gif" width="250" />
