@@ -81,7 +81,11 @@ Click on any crew member below to explore their legend. 🗺️
 
 > _“The true history must be uncovered.”_
 
-
+🏴‍☠️ Role: Archaeologist
+🎯 Bounty: ₯ 930,000,000
+🌸 Fruit: Hana Hana no Mi (Flower-Flower Fruit)
+👁️‍🗨️ Powers: Demonio Fleur, Gigantesco Mano
+🗺️ Goal: Read all Poneglyphs, find the Rio Poneglyph
 
 ---
 
